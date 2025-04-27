@@ -17,7 +17,7 @@ function App() {
     setTimeout(() => setMessage({ visible: false, content: '', type: '' }), 3000);
   };
 
-  // Load contacts from localStorage on component mount
+  
   useEffect(() => {
     console.log('Loading contacts from localStorage...');
     try {
@@ -28,7 +28,7 @@ function App() {
         const parsedContacts = JSON.parse(storedContacts);
         console.log('Parsed contacts:', parsedContacts);
         
-        // Validate the stored data
+        
         if (Array.isArray(parsedContacts)) {
           console.log('Setting contacts:', parsedContacts);
           setContacts(parsedContacts);
@@ -45,7 +45,7 @@ function App() {
     }
   }, []);
 
-  // Save contacts to localStorage whenever they change
+  
   useEffect(() => {
     console.log('Saving contacts to localStorage:', contacts);
     try {
